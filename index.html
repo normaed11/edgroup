@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <title> Estudios Cotizaciones Internationales</title>
 </head>
@@ -24,32 +25,39 @@
 
     <!--secccion de recuersos-->
 
-    <div class="seccionderecursosexterno">
-        <h3>Recursos Externos</h3>
+    <div class="flex-row" id="containerholder">
+        <h3 class="links">Recursos Externos</h3>
         <nav>
             <ul>
+
+                <a class="btn btn-success btn-block " href="https://maps.google.com/" role="button">Google
+                    Map</a>
+
+
                 <li>
-                    <a href="https://maps.google.com/">Google Map</a>
+                    <a class="btn btn-success btn-block" href="https://power.dat.com/" role="button">DAT</a>
+                </li>
+                <li>
+                    <a class="btn btn-success 6rem" href="https://app.truckstop.com/" role="button">TruckStop</a>
+                </li>
+                <li>
+                    <a class="btn btn-success" href="http://www.awtrack.com/webapp/login.php" role="button">Allways
+                        Track</a>
+                </li>
+                <li>
+                    <a class="btn btn-success" href="https://portal.monarchtracking.com" role="button">Monarch
+                        Tracking</a>
+                </li>
+                <li>
+                    <a class="btn btn-success" href="https://rtspro.com/factoring" role="button">RTS</a>
 
                 </li>
                 <li>
-                    <a href="https://power.dat.com/">DAT</a>
+                    <a class="btn btn-success" href="https://cloud6.acesuitecloud.com/" role="button">RB Systems</a>
                 </li>
                 <li>
-                    <a href="https://app.truckstop.com/">TruckStop</a>
-                </li>
-                <li>
-                    <a href="http://www.awtrack.com/webapp/login.php">Allways Track</a>
-                </li>
-                <li>
-                    <a href="https://portal.monarchtracking.com">Monarch Tracking</a>
-                </li>
-                <li>
-                    <a href="https://rtspro.com/factoring">RTS</a>
-
-                </li>
-                <li>
-                    <a href="https://cloud6.acesuitecloud.com/">RB Systems</a>
+                    <a class="btn btn-success" href="https://global.gotomeeting.com/join/513471509role="
+                        button"">Conexion Abierta</a>
                 </li>
             </ul>
         </nav>
@@ -62,41 +70,42 @@
                 <h1 class="title">Cotizaciones Internationales</h1>
                 <h3 class="estudiodecotizacion">Estudio de Cotizacion</h3>
 
-                <form id="passwordgeneratorform" class="form">
+                <form id="passwordgeneratorform" class="form" onsubmit="return false">
                     <label for="tarifa" id="tarifa"> Tarifa International</label>
-                    <input class=tarifa international>
+                    <input class="tarifa" type="number" required>
 
                     <label for="costocaja" id="costocaja"> Costo de Renta de Caja</label>
-                    <input class=costocaja>
+                    <input class="costocaja" value="175" type="number" required>
 
                     <label for="usingresomin" id="usingresomin"> US Mexico Direct Ingreso Minimo </label>
-                    <input class=usingresomin>
+                    <input class="usingresomin" value="225" type="number" required>
 
                     <label for="ingresousmd" id="ingresousmd"> Ingreso US Mexico Direct en Mexico</label>
-                    <input class=costo caja>
+                    <input class="ingresousmd" type="number" readonly>
 
                     <label for="cruceimpo" id="cruceimpo"> Costo de cruce de importacion a Mexico</label>
-                    <input class=cruceimpo>
+                    <input class="cruceimp" value="110" type="number" required>
 
                     <label for="cruceexp" id="cruceexp"> Costo de cruce de exportacion de Mexico</label>
-                    <input class=cruceexp>
+                    <input class="cruceexp" value="110" type="number" required>
 
                     <label for="fletemx" id="fletemx"> Costo de Flete en Mexico</label>
-                    <input class=fletemx>
+                    <input class="fletemx" value="550" type="number" required>
 
                     <label for="ustrans" id="ustrans"> Flete USA (owner operator)</label>
-                    <input class=ustrans>
+                    <input class="ustrans" type="number" readonly>
 
                     <label for="millasusa" id="millasusa">Millas en USA</label>
-                    <input class=millasusa>
+                    <input class="millasusa" type="number" required>
 
                     <label for="pmilla" id="pmilla"> Precio Por Milla en USA</label>
-                    <input class=pmilla>
+                    <input class="pmilla" type="number" readonly>
 
                     <label for="otroscostos" id="otroscostos"> Otros Costos (ejemplo demoras)</label>
-                    <input class=otroscostos>
+                    <input class="otroscostos" type="number" value="0">
 
-                    <button type="submit" class="button">Calcular</button>
+                    <button onclick="calcular()" class="button">Calcular</button>
+
 
                 </form>
 
@@ -122,6 +131,21 @@
             </div>
         </div>
     </Section>
+    <div id="button" class="" data-toggle="modal" data-target="#noAceptar">button</div>
+    <div class="modal fade" id="noAceptar" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="text-danger">No Aceptar!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
 </body>
 
