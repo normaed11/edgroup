@@ -1,23 +1,18 @@
-body {
-    background-color:white;
-    margin:0;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+*{
+    box-sizing: border-box;
+}
+
     
-    }
     .container {
         background-color: green;
-        padding: 5rem;
+        padding: 2rem;
         border-radius: 1rem;
         border: 2px solid black;
         display:flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column;center
     
     }
     .form {
@@ -86,5 +81,38 @@ body {
         
     }
     .containerholder{
-         ;
+        ;
+         
     }
+    header {
+        padding: 2px 2px;
+        margin: 0;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+
+    }
+    header img {
+        width: 15%;
+        height: 15%;
+        float:right;
+    position:relative;
+    
+    ;
+        
+    }
+    .edgroup {
+        align-items: center;
+        color: green;
+        
+    }
+    .seccionderecursosexterno{
+color:green;
+float: left;
+ 
+    }
+    
+    
+    
