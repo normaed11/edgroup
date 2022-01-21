@@ -15,11 +15,11 @@ function calcular() {
     var margenusa = tarifa - (costocaja + usingresomin + cruceimp + cruceexp + fletemx + otroscostos);
 
     pmilla.value = margenusa / millasusa;
-    var accepted = true
+
     var surplus = 0
     if (pmilla.value < 1.8) {
-        accepted = false
-        $("#button").trigger("click");
+
+        $("#modalbutton").trigger("click");
         ustrans.value = ""
     } else {
         if (margenusa > millasusa * 2.25) {
@@ -32,4 +32,36 @@ function calcular() {
     }
     ingresousmd.value = surplus + usingresomin;
 
+}
+function calularMillas() {
+    var origin = document.getElementsByClassName("origen")[0].value;
+    var destination = document.getElementsByClassName("destino")[0].value;
+    var service = new google.maps.DistanceMatrixService();
+
+    service.getDistanceMatrix({
+        origins: [origin],
+        destinations: [destination],
+        unitSystem: google.maps.UnitSystem.IMPERIAL,
+        travelMode: google.maps.TravelMode.DRIVING,
+        avoidHighways: false,
+        avoidTolls: false
+    },
+        callback
+    );
+
+
+}
+
+function callback(response, status) {
+    var orig = document.getElementsByClassName("origen")[0],
+        dest = document.getElementsByClassName("destino")[0],
+        dist = document.getElementsByClassName("millas")[0];
+
+    if (status == "OK") {
+        orig.value = response.destinationAddresses[0];
+        dest.value = response.originAddresses[0];
+        dist.value = response.rows[0].elements[0].distance.text;
+    } else {
+        alert("Error: " + status);
+    }
 }
