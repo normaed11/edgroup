@@ -13,7 +13,7 @@ function calcular() {
     var otroscostos = parseInt(document.getElementsByClassName("otroscostos")[0].value);
 
     var margenusa = tarifa - (costocaja + usingresomin + cruceimp + cruceexp + fletemx + otroscostos);
-
+    console.log('logtarifa')
     pmilla.value = margenusa / millasusa;
 
     var surplus = 0
@@ -65,3 +65,27 @@ function callback(response, status) {
         alert("Error: " + status);
     }
 }
+function calcularLog() {
+
+    var logtarifa = parseInt(document.getElementsByClassName("logtarifa")[0].value);
+    var logustrans = parseInt(document.getElementsByClassName("logustrans")[0].value);
+    var logfletemx = parseInt(document.getElementsByClassName("logfletemx")[0].value);
+    var logcruceimp = parseInt(document.getElementsByClassName("logcruceimp")[0].value);
+    var logcruceexp = parseInt(document.getElementsByClassName("logcruceexp")[0].value);
+    var logforwarding = parseInt(document.getElementsByClassName("logforwarding")[0].value);
+    var logtransbordo = parseInt(document.getElementsByClassName("logtransbordo")[0].value);
+    var logcostocaja = parseInt(document.getElementsByClassName("logcostocaja")[0].value);
+    var logfumigacion = parseInt(document.getElementsByClassName("logfumigacion")[0].value);
+    var logotroscostos = parseInt(document.getElementsByClassName("logotroscostos")[0].value);
+    var logmargen = document.getElementsByClassName("logmargen")[0];
+
+
+
+    var subtraction = logtarifa - (logustrans + logfletemx + logcruceimp + logcruceexp + logforwarding + logtransbordo + logcostocaja + logfumigacion + logotroscostos);
+    logmargen.value = subtraction;
+}
+
+
+
+
+
