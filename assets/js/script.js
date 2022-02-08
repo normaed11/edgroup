@@ -88,13 +88,13 @@ function calcularLog() {
 // caluladora quick pay
 function calcularqp() {
 
-    var montoqp = parseInt(document.getElementsByClassName("montopq")[0].value);
-    alert("montoqp" + montoqp)
+    var monto = parseInt(document.getElementsByClassName("montopq")[0].value);
+    alert("monto" + montoqp);
     var perquickpay = parseInt(document.getElementsByClassName("perquickpay")[0].value);
     var calcular = document.getElementsByClassName("calcularqp")[0];
 
 
-    var multiplyqp = montoqp * perquickpay;
+    var multiplyqp = monto * perquickpay;
     calcular.value = multiplyqp;
 
 
