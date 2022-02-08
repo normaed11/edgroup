@@ -16,6 +16,8 @@
         height: auto;
         width: auto;
         right: 6%;
+        margin-bottom: 25px;
+        color:white
     
     }
     .form {
@@ -25,6 +27,7 @@
         column-gap: 3rem;
         justify-content: center;
         align-items: center;
+        
     
     }
     
@@ -126,4 +129,7 @@
 #containerholder{
     margin-top: 200px ;
     margin-bottom: 50px;
+}
+input{
+    color: black;
 }

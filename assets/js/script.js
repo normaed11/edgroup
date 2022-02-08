@@ -85,6 +85,26 @@ function calcularLog() {
     logmargen.value = subtraction;
 }
 
+// caluladora quick pay
+function calcularqp() {
+
+    var montoqp = parseInt(document.getElementsByClassName("montopq")[0].value);
+    alert("montoqp" + montoqp)
+    var perquickpay = parseInt(document.getElementsByClassName("perquickpay")[0].value);
+    var calcular = document.getElementsByClassName("calcularqp")[0];
+
+
+    var multiplyqp = montoqp * perquickpay;
+    calcular.value = multiplyqp;
+
+
+}
+
+//calculadora coordination fee
+
+
+//calculadora rebate
+
 
 
 
