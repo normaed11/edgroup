@@ -88,24 +88,39 @@ function calcularLog() {
 // caluladora quick pay
 function calcularqp() {
 
-    var monto = parseInt(document.getElementsByClassName("montopq")[0].value);
-    alert("monto" + montoqp);
-    var perquickpay = parseInt(document.getElementsByClassName("perquickpay")[0].value);
+    var monto = parseInt(document.getElementsByClassName("montoqp")[0].value);
+    var perquickpay = parseFloat(document.getElementsByClassName("perquickpay")[0].value);
     var calcular = document.getElementsByClassName("calcularqp")[0];
 
 
-    var multiplyqp = monto * perquickpay;
+    var multiplyqp = monto * (perquickpay / 100);
     calcular.value = multiplyqp;
 
 
 }
 
 //calculadora coordination fee
+function calcularCoordinaFee() {
 
+    var monto = document.getElementsByClassName("montoc")[0].value;
+    var coordifee = document.getElementsByClassName("coordifee")[0].value;
+    var calcular = document.getElementsByClassName("calcularcoordifee")[0];
+
+
+    var multiplycoordifee = monto * (coordifee / 100);
+    calcular.value = multiplycoordifee;
+}
 
 //calculadora rebate
 
+function calcularFuelRebate() {
 
+    var monto = document.getElementsByClassName("montofr")[0].value;
+    var rebate = document.getElementsByClassName("rebate")[0].value;
+    var calcular = document.getElementsByClassName("calcularrebate")[0];
+    var multiplyrebate = monto * (rebate);
+    calcular.value = multiplyrebate;
+}
 
 
 

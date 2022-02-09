@@ -224,7 +224,7 @@
                 <input class="montoqp" value="0" type="number">
 
                 <label for="%" id="perquickpay"> % </label>
-                <input class="perquickpay" value=1.5 type=number>
+                <input class="perquickpay" value=1.5>
 
                 <label for="calcularqp" id="calcularqp"> Calculo</label>
                 <input class="calcularqp" value=0 type="number">
@@ -238,16 +238,15 @@
             <h2>Coordination Fee</h2>
             <form class="form" onsubmit="return false">
 
-                <label for="montoqp" id="montoqp"> Monto</label>
-                <input class="montoqp" value="0" type="number">
+                <label for="montoc" id="montoc"> Monto</label>
+                <input class="montoc" value="0" type="number">
 
-                <label for="%" id="perquickpay"> % </label>
-                <input class="perquickpay" value="10" type=number>
+                <label for="%" id="coordifee"> % </label>
+                <input class="coordifee" value="10" type=number>
 
-                <label for=" calcularfee" id="calcularfee"> Calculo</label>
-                <input class="calcularfee" value=>
-
-                <button onclick="calcularfee()" type="submit2" class="button">Calcular Coordinacion Fee</button>
+                <label for="calcularcoordifee" id="calcularcoordifee"> Calculo</label>
+                <input class="calcularcoordifee" value=>
+                <button onclick="calcularCoordinaFee()" type="submit2" class="button">Calcular Coordinacion Fee</button>
 
             </form>
         </div>
@@ -256,16 +255,16 @@
             <h2>Fuel Rebate</h2>
             <form class="form" onsubmit="return false">
 
-                <label for="montoqp" id="montoqp"> Monto</label>
-                <input class="montoqp" value="0" type="number">
+                <label for="montofr" id="montofr"> Monto</label>
+                <input class="montofr" value=0 type="number">
 
-                <label for="%" id="perquickpay"> % </label>
-                <input class="perquickpay" value=".10" type=number>
+                <label for="%" id="rebate"> % </label>
+                <input class="rebate" value=.10 type=number>
 
-                <label for=" calcularrebate" id="calcularrebate"> Calculo</label>
+                <label for="calcularrebate" id="calcularrebate"> Calculo</label>
                 <input class="calcularrebate" value=>
 
-                <button onclick="calcularebate()" type="submit2" class="button">Calcular Fuel Rebate</button>
+                <button onclick="calcularFuelRebate()" type="submit2" class="button">Calcular Fuel Rebate</button>
 
             </form>
         </div>
