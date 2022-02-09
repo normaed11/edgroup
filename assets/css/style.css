@@ -81,6 +81,7 @@
     header {
         padding: 2px 2px;
         margin: 0;
+        margin-bottom:20px ;
         background-color: white;
         justify-content: center;
         align-items: center;
@@ -89,6 +90,7 @@
         width:100%;
         top:0;
         
+         
 
     }
     header img {
@@ -112,9 +114,11 @@
     .navigation{
         width: 300px;
         list-style-type: none;
+        margin-top: 20px;
     }
 
     .navigation a {
+    
         margin-bottom: 10px;
         background-color: green;
         color: white;
@@ -127,9 +131,14 @@
     display:flex;
 }
 #containerholder{
-    margin-top: 200px ;
+ margin-top: 400px; 
     margin-bottom: 50px;
 }
 input{
     color: black;
+}
+#currentDay{
+    color:navy;
+    font-size: 30px;
+    
 }

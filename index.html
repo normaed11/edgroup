@@ -11,7 +11,7 @@
     <title> Estudios Cotizaciones Internationales</title>
 </head>
 
-<body>
+<body onload="currentDay()">
     <!--seccion de encabezado-->
     <header>
         <h1 class="edgroup">
@@ -20,9 +20,11 @@
             MC:744942<br />
             DOT:2248733<br />
             TAX ID: 20-1164488<br />
-            SCAC:EDGA
+            SCAC:EDGA<br>
+            <span id="currentDay"></span>
         </h3>
-        <img src=" assets/images/logo nuevo.jpg" </h1>
+
+        <img src=" assets/images/logo nuevo.jpg">
     </header>
 
 
@@ -246,7 +248,8 @@
 
                 <label for="calcularcoordifee" id="calcularcoordifee"> Calculo</label>
                 <input class="calcularcoordifee" value=>
-                <button onclick="calcularCoordinaFee()" type="submit2" class="button">Calcular Coordinacion Fee</button>
+                <button onclick="calcularCoordinaFee()" type="submit2" class="button">Calcular Coordinacion
+                    Fee</button>
 
             </form>
         </div>

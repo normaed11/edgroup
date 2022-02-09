@@ -1,3 +1,21 @@
+//Current Day
+function currentDay() {
+    var date = new Date();
+    var day = (new Intl.DateTimeFormat('en-US', {
+        weekday: 'long',
+        month: 'long',
+        day: '2-digit',
+        year: 'numeric',
+
+    }).format(date));
+
+    document.getElementById("currentDay").innerHTML = day;
+
+
+}
+
+
+
 function calcular() {
 
     var tarifa = parseInt(document.getElementsByClassName("tarifa")[0].value);
