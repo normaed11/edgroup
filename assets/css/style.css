@@ -1,144 +1,152 @@
-
-*{
+* {
     box-sizing: border-box;
 }
 
-    
-    .container {
-        background-color: green;
-        padding: 2rem;
-        border-radius: 1rem;
-        border: 2px solid black;
-        display:flex;
-        justify-content: left;
-        align-items: center;
-        flex-direction: column;
-        height: auto;
-        width: auto;
-        right: 6%;
-        margin-bottom: 25px;
-        color:white
-    
-    }
-    .form {
-        display: grid;
-        grid-template-columns: auto auto;
-        row-gap: 1rem;
-        column-gap: 3rem;
-        justify-content: center;
-        align-items: center;
-        
-    
-    }
-    
-    .title {
-        margin: 0;
-        text-align: center;
-    }
-    
-    label{
-        font-weight: bold;
-    }
-    .numberofcharacterscontainer{
-        display: flex;
-        align-items: center;
-    }
-    .number-input {
-        width: 3rem
-    
-    }
-    .generadodeclave{
-        margin: 0;
-    
-    }
-    
-    .campos {
-        background-color: white;
-        color: black;
-        padding: 1rem;
-        border: 1px solid #333 ;
-        height: 2rem;
-        width: 350px;
-        display: flex; 
-        justify-content: center;
-        align-items: center;
-        word-break: break-all;
-        border-radius: .5rem; 
-    }
-    .button {
-        grid-column: span 2;
-        background-color: transparent;
-        border: 2px solid white;
-        color: white;
-        padding: .5rem 1rem;
-        font-weight: bold;
-        cursor:pointer;
-        border-radius: 1rem;
-    }
-    
-  
-   
-    header {
-        padding: 2px 2px;
-        margin: 0;
-        margin-bottom:20px ;
-        background-color: white;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: fixed;
-        width:100%;
-        top:0;
-        
-         
 
-    }
-    header img {
-        width: 10%;
-        height: 5%;
-        float:right;
-        right: 4%;
-        top: 4%;
-    position:fixed;
-    
-    ;
-        
-    }
-    .edgroup {
-        align-items: center;
-        color: green;
-        
-    }
-    
- 
-    .navigation{
-        width: 300px;
-        list-style-type: none;
-        margin-top: 20px;
-    }
-
-    .navigation a {
-    
-        margin-bottom: 10px;
-        background-color: green;
-        color: white;
-    }
-    
-    .links{
-        margin-left: 60px;
-    }
-.d-flex{
-    display:flex;
+.container {
+    background-color: green;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    right: 6%;
+    margin-bottom: 25px;
+    color: white
 }
-#containerholder{
- margin-top: 400px; 
+
+.form {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.numberofcharacterscontainer {
+    display: flex;
+    align-items: center;
+}
+
+.number-input {
+    width: 3rem
+}
+
+.generadodeclave {
+    margin: 0;
+
+}
+
+.campos {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border: 1px solid #333;
+    height: 2rem;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    border-radius: .5rem;
+}
+
+.button {
+    grid-column: span 2;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+
+
+header {
+    padding: 2px 2px;
+    margin: 0;
+    margin-bottom: 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+
+
+}
+
+header img {
+    width: 10%;
+    height: 5%;
+    float: right;
+    right: 4%;
+    top: 4%;
+    position: fixed;
+
+    ;
+
+}
+
+.edgroup {
+    align-items: center;
+    color: green;
+
+}
+
+
+.navigation {
+    width: 300px;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.navigation a {
+
+    margin-bottom: 10px;
+    background-color: green;
+    color: white;
+}
+
+.links {
+    margin-left: 60px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+#containerholder {
+    margin-top: 400px;
     margin-bottom: 50px;
 }
-input{
+
+input {
     color: black;
 }
-#currentDay{
-    color:navy;
+
+#currentDay {
+    color: navy;
     font-size: 30px;
-    
+
 }
