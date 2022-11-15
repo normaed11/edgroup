@@ -76,6 +76,7 @@ label {
     font-weight: bold;
     cursor: pointer;
     border-radius: 1rem;
+
 }
 
 
@@ -116,12 +117,13 @@ header img {
 
 
 .navigation {
-    width: 300px;
+    /* width: 300px; */
     list-style-type: none;
     margin-top: 20px;
 }
 
-.navigation a {
+.navigation a,
+.btn-success {
 
     margin-bottom: 10px;
     background-color: green;
@@ -130,6 +132,8 @@ header img {
 
 .links {
     margin-left: 60px;
+    cursor: pointer;
+    color: blue;
 }
 
 .d-flex {
@@ -137,7 +141,7 @@ header img {
 }
 
 #containerholder {
-    margin-top: 400px;
+    margin-top: 250px;
     margin-bottom: 50px;
 }
 
@@ -149,4 +153,18 @@ input {
     color: navy;
     font-size: 30px;
 
+}
+
+.btn {
+    width: 350px;
+}
+
+.content,
+.section {
+    display: none;
+}
+
+.section-title {
+    font-size: 20px;
+    width: 450px;
 }

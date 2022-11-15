@@ -140,5 +140,13 @@ function calcularFuelRebate() {
     calcular.value = multiplyrebate;
 }
 
-
+function showHide(id) {
+    var elm = document.getElementById(id);
+    if (elm.style.display == "block") {
+        elm.style.display = "none";
+    }
+    else {
+        elm.style.display = "block";
+    }
+}
 

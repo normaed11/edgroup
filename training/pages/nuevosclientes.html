@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <title>Procedimientos de Nuevos Clientes</title>
 </head>
 
@@ -16,261 +16,148 @@
     <header>
         <h1 class="edgroup">
             ED Group & TFS Customs Brokers, Inc</h1>
-        <h2>Recuersos Para Ingresar Nuevos Clientes</h2>
-        <h3>
-            <span id="currentDay"></span><br><br>
+        <h7>
+            <span id="currentDay"></span>
+        </h7>
+        <h2>Recuersos Para Ingresar Nuevos Clientes</h2><br><br>
 
 
-
-        </h3>
-
-        <img src=" assets/images/logo nuevo.jpg">
+        <img src="../../assets/images/logo nuevo.jpg">
     </header>
 
 
     <!--secccion de recuersos-->
 
     <div class="flex-row" id="containerholder">
-        <h3 class="links">Recursos</h3>
+
         <nav>
             <ul class=navigation>
+                <h2 onclick="showHide('section1')" class="btn btn-success btn-block section-title">Proceso General</h2>
+                <div class="section " id="section1">
+                    <li>
+                        <h3 onclick="showHide('content1')" class="links">Video de Proceso General ▼</h3>
+                        <div class="content" id="content1">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ag9g6Xzo5sI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <!-- <a class="btn btn-success btn-block" target="_blank" href="#" role="button" download> Download Video
+                    </a> -->
+                        </div>
+                    </li>
+                    <li>
+                        <h3 onclick="showHide('content2')" class="links">PDF de Proceso General ▼</h3>
+                        <div class="content" id="content2">
+                            <embed src="../docs/Alta de Nuevo Clientes.pdf" width="500" height="375"
+                                type="application/pdf">
+                            <a class="btn btn-success btn-block" target="_blank"
+                                href="../docs/Alta de Nuevo Clientes.pdf" download>Download PDF
+                            </a>
+                        </div>
+                    </li>
+                </div>
+                <h2 onclick="showHide('section2')" class="btn btn-success btn-block section-title">Carta Poder (Power of
+                    Attorney)</h2>
+                <div class="section" id="section2">
+                    <li>
+                        <h3 onclick="showHide('content3')" class="links"> PDF Power of Attorney ▼</h3>
+                        <div class="content" id="content3">
+                            <embed src="../docs/Power of Attorney CHB.pdf" width="500" height="375"
+                                type="application/pdf">
+                            <a class="btn btn-success btn-block" target="_blank"
+                                href="../docs/Power of Attorney CHB.pdf" download>Download PDF
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h3 onclick="showHide('content4')" class="links">PDF Curso Power Of Attorney ▼</h3>
+                        <div class="content" id="content4">
+                            <embed src="../docs/CURSO POWER OF ATTORNEY.pdf" width="500" height="375"
+                                type="application/pdf">
+                            <a class="btn btn-success btn-block" target="_blank"
+                                href="../docs/CURSO POWER OF ATTORNEY.pdf" download>Download PDF
+                            </a>
+                        </div>
+                    </li>
+                </div>
+                <h2 onclick="showHide('section3')" class="btn btn-success btn-block section-title">Consultar Importador
+                    (Query importer)</h2>
+                <div class="section" id="section3">
+                    <li>
+                        <h3 onclick="showHide('content5')" class="links">Consultar Numero de Importador▼</h3>
+                        <div class="content" id="content5">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fuaAcRuRQRs"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <!-- <a class="btn btn-success btn-block" target="_blank" href="#" role="button" download> Download Video
+                    </a> -->
+                        </div>
+                    </li>
+                </div>
+                <h2 onclick="showHide('section4')" class="btn btn-success btn-block section-title">Forma 5106 Alta o
+                    cambios de Importador</h2>
+                <div class="section" id="section4">
+
+                    <li>
+                        <h3 onclick="showHide('content6')" class="links">PDF 5106 ▼</h3>
+                        <div class="content" id="content6">
+                            <embed src="../docs/CBP Form 5106.pdf" width="500" height="375" type="application/pdf">
+                            <a class="btn btn-success btn-block" target="_blank" href="../docs/CBP Form 5106.pdf"
+                                download>Download PDF
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 onclick="showHide('content7')" class="links">Video 5106 en ACE llenado y transimision ▼</h3>
+                        <div class="content" id="content7">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/83IJQgyUGpw"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <!-- <a class="btn btn-success btn-block" target="_blank" href="#" role="button" download> Download Video
+                    </a> -->
+                        </div>
+                    </li>
+                </div>
+                <h2 onclick="showHide('section5')" class="btn btn-success btn-block section-title">Fianza Sencilla
+                    (Single Entry Bond)</h2>
+                <div class="section" id="section5">
+                    <li>
+                        <h3 onclick="showHide('content8')" class="links">Tramitar Fianza Sencilla▼</h3>
+                        <div class="content" id="content8">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fzaWLD-8e1w"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <!-- <a class="btn btn-success btn-block" target="_blank" href="#" role="button" download> Download Video
+                    </a> -->
+                        </div>
+                    </li>
+                </div>
 
 
-                <li>
-                    <a class="btn btn-success btn-block" target="_blank" href="#" role="button">Nuevos Clientes
-                    </a>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ag9g6Xzo5sI"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </li>
-                <li>
-                    <a class="btn btn-success btn-block" target="_blank"
-                        href="https://ed-group-university.teachable.com/?preview=logged_out" button"">ED Group
-                        University</a>
-                </li>
 
 
-                <li>
-                    <a class="btn btn-success btn-block " target="_blank" href="https://hts.usitc.gov/current"
-                        role="button">HTS</a>
-
-                </li>
 
 
-                <li>
-                    <a class="btn btn-success btn-block" target="_blank"
-                        href="https://global.gotomeeting.com/join/513471509role=" button"">Conexion Abierta</a>
-                </li>
-                <li>
-                    <a class="btn  btn-block" target="_blank" href=" https://maps.google.com/" role="button">Google
-                        Maps</a>
-                </li>
-                <li>
-                    <a class="btn  btn-block" target="_blank" href="training/index.html" role="button">Training
-                    </a>
-                </li>
+
+
+
+
+
             </ul>
         </nav>
-        <a target="_blank" href="mailto:?to=&body=attachment&attachment=./assets/images/logo nuevo.jpg">Mail</a>
+
     </div>
     </section>
 
-    <!--secccion calculadora de flete international-->
 
-    <Section>
-        <div class="d-flex flex-row">
-            <div class="container">
-                <h1 class="title">Cotizaciones Internationales</h1>
-                <h3 class="estudiodecotizacion">Estudio de Cotizacion</h3>
-
-                <form id="passwordgeneratorform" class="form" onsubmit="return false">
-                    <label for="tarifa" id="tarifa"> Tarifa International</label>
-                    <input class="tarifa" type="number" required>
-
-                    <label for="costocaja" id="costocaja"> Costo de Renta de Caja</label>
-                    <input class="costocaja" value="175" type="number" required>
-
-                    <label for="usingresomin" id="usingresomin"> US Mexico Direct Ingreso Minimo </label>
-                    <input class="usingresomin" value="225" type="number" required>
-
-                    <label for="ingresousmd" id="ingresousmd"> Ingreso US Mexico Direct en Mexico</label>
-                    <input class="ingresousmd" type="number" readonly>
-
-                    <label for="cruceimpo" id="cruceimpo"> Costo de cruce de importacion a Mexico</label>
-                    <input class="cruceimp" value="110" type="number" required>
-
-                    <label for="cruceexp" id="cruceexp"> Costo de cruce de exportacion de Mexico</label>
-                    <input class="cruceexp" value="110" type="number" required>
-
-                    <label for="fletemx" id="fletemx"> Costo de Flete en Mexico</label>
-                    <input class="fletemx" value="550" type="number" required>
-
-                    <label for="ustrans" id="ustrans"> Flete USA (owner operator)</label>
-                    <input class="ustrans" type="number" readonly>
-
-                    <label for="millasusa" id="millasusa">Millas en USA</label>
-                    <input class="millasusa" type="number" required>
-
-                    <label for="pmilla" id="pmilla"> Precio Por Milla en USA</label>
-                    <input class="pmilla" type="number" readonly>
-
-                    <label for="otroscostos" id="otroscostos"> Otros Costos (ejemplo demoras)</label>
-                    <input class="otroscostos" type="number" value="0">
-
-                    <button onclick="calcular()" class="button">Calcular</button>
-
-
-                </form>
-
-            </div>
-            <!--secccion de calculadora de millas-->
-
-
-            <div class="container">
-                <h2>Calcular Millas</h2>
-                <form class="form" onsubmit="return false">
-
-                    <label for="origen" id="origen"> Origen</label>
-                    <input class="origen">
-
-                    <label for="destino" id="destino"> Destino</label>
-                    <input class="destino">
-
-                    <label for="millas" id="millas"> Millas</label>
-                    <input class="millas">
-                    <button onclick="calularMillas()" type="submit2" class="button">Calcular Millas</button>
-
-                </form>
-                <!--secccion de calculadora de Logistica-->
-
-            </div>
-            <div class="container">
-                <h2>Logistica</h2>
-                <h4>Calculo de Margen</h4>
-
-                <form class="form" onsubmit="return false">
-
-
-                    <label for="logtarifa" id="logtarifa"> Tarifa International</label>
-                    <input class="logtarifa" type="number" required>
-
-                    <label for="logustrans" id="logustrans">Costo Flete USA</label>
-                    <input class="logustrans" type="number" value="0">
-
-                    <label for="logfletemx" id="logfletemx"> Costo de Flete en Mexico</label>
-                    <input class="logfletemx" value="0" type="number">
-
-                    <label for="logcruceimpo" id="logcruceimpo"> Costo de Cruce de Importacion a Mexico</label>
-                    <input class="logcruceimp" value="110" type="number">
-
-                    <label for="logcruceexp" id="logcruceexp"> Costo de cruce de exportacion de Mexico</label>
-                    <input class="logcruceexp" value="110" type="number">
-
-                    <label for="logforwarding" id="logforwarding"> Costo Forwarding</label>
-                    <input class="logforwarding" value="0" type="number">
-
-                    <label for="logtransbordo" id="logtransbordo"> Costo de Transbordo</label>
-                    <input class="logtransbordo" value="0" type="number">
-
-                    <label for="logcostocaja" id="logcostocaja"> Costo de Renta de Caja</label>
-                    <input class="logcostocaja" value="0" type="number">
-
-                    <label for="logfumigacionx" id="logfumigacion"> Costo de Fumigacion</label>
-                    <input class="logfumigacion" value="0" type="number">
-
-                    <label for="logotroscostos" id="logotroscostos"> Otros Costos (ejemplo demoras)</label>
-                    <input class="logotroscostos" type="number" value="0">
-
-                    <label for="logmargen" id="logmargen"> Margen</label>
-                    <input class="logmargen" value="0" type="number">
-
-
-                    <button onclick="calcularLog()" type="submit2" class="button">Calcular</button>
-
-                </form>
-
-            </div>
-        </div>
-    </Section>
-    <!--secccion de button de alerta de no aceptar-->
-
-    <button class=hidden id="modalbutton" data-toggle="modal" data-target="#noAceptar">
-        no aceptar
-    </button>
-    <div class="modal fade" id="noAceptar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h1 class="text-danger">No Aceptar!</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--seccion de calculo de quick pay-->
-    <div class=d-flex flex-row>
-        <div class="container">
-            <h2>Quick Pay</h2>
-            <form class="form" onsubmit="return false">
-                <label for="montoqp" id="montoqp"> Monto</label>
-                <input class="montoqp" value="0" type="number">
-
-                <label for="%" id="perquickpay"> % </label>
-                <input class="perquickpay" value=1.5>
-
-                <label for="calcularqp" id="calcularqp"> Calculo</label>
-                <input class="calcularqp" value=0 type="number">
-
-                <button onclick="calcularqp()" type="submit2" class="button">Calcular Quick Pay</button>
-
-            </form>
-        </div>
-        <!--seccion de Coordinacion Fee-->
-        <div class="container">
-            <h2>Coordination Fee</h2>
-            <form class="form" onsubmit="return false">
-
-                <label for="montoc" id="montoc"> Monto</label>
-                <input class="montoc" value="0" type="number">
-
-                <label for="%" id="coordifee"> % </label>
-                <input class="coordifee" value="10" type=number>
-
-                <label for="calcularcoordifee" id="calcularcoordifee"> Calculo</label>
-                <input class="calcularcoordifee" value=>
-                <button onclick="calcularCoordinaFee()" type="submit2" class="button">Calcular Coordinacion
-                    Fee</button>
-
-            </form>
-        </div>
-        <!--seccion de coordinacion Fuel Rebate-->
-        <div <div class="container">
-            <h2>Fuel Rebate</h2>
-            <form class="form" onsubmit="return false">
-
-                <label for="montofr" id="montofr"> Monto</label>
-                <input class="montofr" value=0 type="number">
-
-                <label for="%" id="rebate"> % </label>
-                <input class="rebate" value=.10 type=number>
-
-                <label for="calcularrebate" id="calcularrebate"> Calculo</label>
-                <input class="calcularrebate" value=>
-
-                <button onclick="calcularFuelRebate()" type="submit2" class="button">Calcular Fuel Rebate</button>
-
-            </form>
-        </div>
-    </div>
 
     <!--secccion ligas de api-->
 
-    <script src="../assets/js/script.js"></script>
+    <script src="../../assets/js/script.js"></script>
     <!--secccion map de google para calcular millas-->
 
     <script type="text/javascript"
