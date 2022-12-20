@@ -82,9 +82,8 @@ label {
 
 
 header {
-    padding: 2px 2px;
-    margin: 0;
-    margin-bottom: 20px;
+    padding: 15px 2px 2px 2px;
+    margin: 0 0 20px 0;
     background-color: white;
     justify-content: center;
     align-items: center;
@@ -97,17 +96,31 @@ header {
 
 }
 
-header img {
-    width: 10%;
+header .top-right {
+    width: 15%;
     height: 5%;
-    float: right;
     right: 4%;
+    top: 2%;
+    position: fixed;
+
+
+}
+
+.top-left img {
+    width: 15vw;
+    float: left;
+}
+
+header .top-left {
+    width: 15%;
+    height: 5%;
+    left: 4%;
     top: 4%;
     position: fixed;
 
-    ;
-
 }
+
+
 
 .edgroup {
     align-items: center;
@@ -125,7 +138,7 @@ header img {
 .navigation a,
 .btn-success {
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     background-color: green;
     color: white;
 }
@@ -141,7 +154,7 @@ header img {
 }
 
 #containerholder {
-    margin-top: 250px;
+    margin-top: 200px;
     margin-bottom: 50px;
 }
 
@@ -152,11 +165,14 @@ input {
 #currentDay {
     color: navy;
     font-size: 30px;
+    margin-bottom: 10px;
 
 }
 
 .btn {
-    width: 350px;
+    width: 450px;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
 .content,
@@ -167,4 +183,11 @@ input {
 .section-title {
     font-size: 20px;
     width: 450px;
+    margin-bottom: -5px;
+}
+
+#backbutton {
+    width: 100px;
+    padding: 5px 0;
+    background-color: blue;
 }
