@@ -37,7 +37,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </h3>
         
         <div class="top-left">
-            <img src=" assets/images/logo nuevo.jpg">
+        <a href="./"> 
+                <img src=" ./assets/images/logo nuevo.jpg">
+            </a>
         </div>
         
         <div class="top-right">
@@ -53,7 +55,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <!--secccion de recuersos-->
 
     <div class="flex-row" id="containerholder">
-        <h3 class="links">Recursos Externos</h3>
+        <h3 class="links">Resources / Recursos</h3>
         <nav>
             <ul class=navigation>
 
@@ -108,7 +110,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         Maps</a>
                 </li>
                 <li>
-                    <a class="btn  btn-block" target="_self" href="training/index.html" role="button">Training
+                    <a class="btn  btn-block" target="_self" href="training/index.php" role="button">Training
                     </a>
                 </li>
                 <li>

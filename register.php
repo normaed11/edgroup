@@ -114,48 +114,69 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
  
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        .wrapper{ width: 360px; margin-top: 130px; padding: 20px; }
     </style>
 </head>
+
 <body>
+<header>
+        <h1 class="edgroup">
+            ED Group & TFS Customs Brokers, Inc</h1>
+            <h2>Sign Up / Registrate</h2>
+       
+        
+        <div class="top-left">
+            <img src=" assets/images/logo nuevo.jpg">
+        </div>
+        
+        <div class="top-right">
+          
+            <h3> Welcome! Bienvenido!</h3>
+            
+        </div>  
+    </header>
     <div class="wrapper">
-        <h2>Sign Up</h2>
+       
         <p>Please fill this form to create an account.</p>
+        <p>Favor de llenar los datos para crear cuenta.</p><br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
-                <label>First Name </label>
+                <label>First Name / Primer Nombre </label>
                 <input type="text" name="fname" class="form-control <?php echo (!empty($fname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $fname; ?>">
                 <span class="invalid-feedback"><?php echo $fname_err; ?></span>                                                
             </div>    
             <div class="form-group">
-                <label>Email</label>
+                <label>Email / Correo Electronico</label>
                 <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
                 <span class="invalid-feedback"><?php echo $email_err; ?></span>
             </div>    
             <div class="form-group">
-                <label>Password</label>
+                <label>Password / Contraseña</label>
                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <label>Confirm Password</label>
+                <label>Confirm Password / Confirmar Contraseña</label>
                 <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-secondary ml-2" value="Reset">
+                
             </div>
            
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <p>Ya tienes cuenta ? <a href="login.php">Entra Aqui</a>.</p>
         </form>
     </div>    
 </body>

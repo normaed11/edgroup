@@ -1,3 +1,13 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +26,22 @@
     <header>
         <h1 class="edgroup">
             ED Group & TFS Customs Brokers, Inc</h1>
-        <h7>
-            <span id="currentDay"></span>
-        </h7>
-        <h2>Recuersos Para Ingresar Nuevos Clientes</h2><br><br>
+        <h2>Recuersos Para Ingresar Nuevos Clientes</h2>
 
 
-        <img src="../../assets/images/logo nuevo.jpg">
+        <div class="top-left">
+            <img src=" ../../assets/images/logo nuevo.jpg">
+        </div>
+
+        <div class="top-right">
+
+            <h3> Welcome,
+                <?php echo $_SESSION["fname"]; ?>!
+            </h3>
+            <p>
+                <a href="../../logout.php">LOGOUT</a>
+            </p>
+        </div>
     </header>
 
 
@@ -33,7 +52,7 @@
         <nav>
             <ul class=navigation>
                 <li>
-                    <a href="./clientes.html" class="btn" id="backbutton">Back<br>Regresar</a>
+                    <a href="./clientes.php" class="btn lastlink" id="backbutton">Back / Regresar</a>
                 </li>
                 <h2 onclick="showHide('section1')" class="btn btn-success btn-block section-title">Proceso General</h2>
                 <div class="section " id="section1">

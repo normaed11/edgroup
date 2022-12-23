@@ -99,17 +99,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>LOGIN</title>
     <style>
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        .wrapper{ width: 360px; margin-top: 130px; padding: 20px; }
     </style>
 </head>
+
 <body>
+<header>
+        <h1 class="edgroup">
+            ED Group & TFS Customs Brokers, Inc</h1>
+            <h2>Login</h2>
+       
+        
+        <div class="top-left">
+            <img src=" assets/images/logo nuevo.jpg">
+        </div>
+        
+        <div class="top-right">
+          
+            <h3> Welcome! Bienvenido!</h3>
+            
+        </div>  
+    </header>
+
     <div class="wrapper">
-        <h2>Login</h2>
+       
         <p>Please fill in your credentials to login.</p>
+        <p>Favor de  ingresar usuario y password.</p><br>
 
         <?php 
         if(!empty($login_err)){
@@ -132,6 +155,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <p>No tienes cuenta? <a href="register.php">Registrate Ahora</a>.</p>
         </form>
     </div>
 </body>

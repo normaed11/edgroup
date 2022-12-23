@@ -1,3 +1,13 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +26,24 @@
     <header>
         <h1 class="edgroup">
             ED Group & TFS Customs Brokers, Inc</h1>
-        <h7>
-            <span id="currentDay"></span>
-        </h7>
-        <h2>Entries SOP's</h2><br><br>
+        <h2>Entries SOP's</h2>
 
 
-        <img src="../../assets/images/logo nuevo.jpg">
+        <div class="top-left">
+            <a href="../../"> 
+                <img src=" ../../assets/images/logo nuevo.jpg">
+            </a>
+        </div>
+
+        <div class="top-right">
+
+            <h3> Welcome,
+                <?php echo $_SESSION["fname"]; ?>!
+            </h3>
+            <p>
+                <a href="../../logout.php">LOGOUT</a>
+            </p>
+        </div>
     </header>
 
 
@@ -33,17 +54,17 @@
         <nav>
             <ul class=navigation>
                 <li>
-                    <a href="../" class="btn" id="backbutton">Back<br>Regresar</a>
+                    <a href="../" class="btn" id="backbutton">Back / Regresar</a>
                 </li>
 
                 <li>
-                    <a class="btn btn-success btn-block " target="_self" href="./clientes.html" role="button">Clientes
+                    <a class="btn btn-success btn-block lastlink" target="_self" href="./clientes.php" role="button">Clientes (Clients)
                     </a>
                 </li>
-
-                <h2 onclick="showHide('section1')" class="btn btn-success btn-block section-title">Proceso General</h2>
+<li>
+                <h2 onclick="showHide('section1')" class="btn btn-success btn-block section-title">Proceso General (General Process)</h2>
                 <div class="section " id="section1">
-
+<ul class=navigation>
                     <li>
                         <h3 onclick="showHide('content1')" class="links">Video de Proceso General ▼</h3>
                         <div class="content" id="content1">
@@ -65,7 +86,9 @@
                             </a>
                         </div>
                     </li>
+                            </ul>
                 </div>
+                            </li>
                 <h2 onclick="showHide('section2')" class="btn btn-success btn-block section-title">Carta Poder (Power of
                     Attorney)</h2>
                 <div class="section" id="section2">
@@ -106,8 +129,8 @@
                         </div>
                     </li>
                 </div>
-                <h2 onclick="showHide('section4')" class="btn btn-success btn-block section-title">Forma 5106 Alta o
-                    cambios de Importador</h2>
+                <h2 onclick="showHide('section4')" class="btn btn-success btn-block section-title">5106 Alta (Register) o
+                    Cambios (Update)</h2>
                 <div class="section" id="section4">
 
                     <li>

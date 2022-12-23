@@ -138,7 +138,7 @@ header .top-left {
 .navigation a,
 .btn-success {
 
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     background-color: green;
     color: white;
 }
@@ -177,17 +177,28 @@ input {
 
 .content,
 .section {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    margin-top: -30px;
 }
 
 .section-title {
     font-size: 20px;
     width: 450px;
-    margin-bottom: -5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 #backbutton {
-    width: 100px;
-    padding: 5px 0;
+
     background-color: blue;
+}
+
+/* each with links and sections needs last link to have this class*/
+.navigation li .lastlink {
+    margin-bottom: -10px;
+}
+
+.navigation li {
+    margin-bottom: 10px;
 }
