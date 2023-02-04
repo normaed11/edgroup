@@ -46,7 +46,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           
             <h3> Welcome, <?php echo $_SESSION["fname"]; ?>!</h3>
             <p>
-                <a href="logout.php">LOGOUT</a>
+                <a href="reset-password.php">Reset Password</a><br>
+                <a href="logout.php">Logout</a>
             </p>   
         </div>  
     </header>

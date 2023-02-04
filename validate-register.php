@@ -14,6 +14,7 @@ require_once "config.php";
 // Define variables and initialize with empty values
 $email = $password = "";
 $token="";
+$ip=$_SERVER['HTTP_HOST'];
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "GET"){
@@ -25,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
        
       
         // Prepare a select statement
-        $sql = "SELECT id, email, password,token FROM users WHERE email = ?";
+        $sql = "SELECT id, email, password,token, fname FROM users WHERE email = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -43,12 +44,12 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                    
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $email, $pwd, $token);
+                    mysqli_stmt_bind_result($stmt, $id, $email, $pwd, $token,$fname);
                     
                     if(mysqli_stmt_fetch($stmt)){
                         if(hash("md5",$email.$pwd)==$token_get){
                             // Password is correct, so start a new session
-                            $sql= "UPDATE users SET validated = 'true' WHERE email = ?";
+                            $sql= "UPDATE users SET ip = '$ip', validated = 'true' WHERE email = ?";
                             $stmt2 = mysqli_prepare($link, $sql);
                             mysqli_stmt_bind_param($stmt2, "s", $param2_email);
                             $param2_email = $email_get;
@@ -59,7 +60,8 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
                                 // Store data in session variables
                                 $_SESSION["loggedin"] = true;
                                 $_SESSION["id"] = $id;
-                                $_SESSION["email"] = $email;                            
+                                $_SESSION["email"] = $email;     
+                                $_SESSION["fname"] = $fname;                        
                                 
                                 // Redirect user to welcome page
                                 header("location: index.php");
@@ -95,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        .wrapper{ width: 500px; padding: 20px; }
     </style>
 </head>
 <body>

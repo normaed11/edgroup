@@ -14,6 +14,7 @@ require_once "config.php";
 // Define variables and initialize with empty values
 $email = $password = "";
 $email_err = $password_err = $login_err = "";
+$ip=$_SERVER['HTTP_HOST'];
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -56,18 +57,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             if($validated=="true"){ // Password is correct and account is validated, so start a new session
-                                session_start();
-                                
-                                // Store data in session variables
-                                $_SESSION["loggedin"] = true;
-                                $_SESSION["id"] = $id;
-                                $_SESSION["email"] = $email;   
-                                $_SESSION["fname"] = $fname;                        
-                                
-                                // Redirect user to welcome page
-                                header("location: index.php");
+                                $sql= "UPDATE users SET ip = '$ip' WHERE email = ?";
+                                $stmt2 = mysqli_prepare($link, $sql);
+                                mysqli_stmt_bind_param($stmt2, "s", $param2_email);
+                                $param2_email = $email;
+                              
+                                if (mysqli_stmt_execute($stmt2)){
+                                    session_start();
+                                    
+                                    // Store data in session variables
+                                    $_SESSION["loggedin"] = true;
+                                    $_SESSION["id"] = $id;
+                                    $_SESSION["email"] = $email;   
+                                    $_SESSION["fname"] = $fname; 
+
+                                    
+                                    // Redirect user to welcome page
+                                    header("location: index.php");
+                                }
+                                else{
+                                    $login_err="Something went wrong. Try again.";
+                                }
 
                             }
+
                             else{
                                 $login_err="Account has not been validated. Please check your e-mail.";
                             }
@@ -155,7 +168,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-            <p>No tienes cuenta? <a href="register.php">Registrate Ahora</a>.</p>
+            <p>No tienes cuenta? <a href="register.php">Registrate Ahora</a>.</p><br>
+            <p> <a href="forgot-password.php">Forgot Password? / Olvidate Tu Contraseña ?</a></p>
+            
         </form>
     </div>
 </body>

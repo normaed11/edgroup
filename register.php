@@ -1,4 +1,12 @@
 <?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: index.php");
+    exit;
+}
 // Include config file
 require_once "config.php";
  
@@ -99,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 
                 // Redirect to login page
-                header("location: validate.php");
+                header("location: validate-register.php");
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }

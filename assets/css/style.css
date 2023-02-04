@@ -202,3 +202,7 @@ input {
 .navigation li {
     margin-bottom: 10px;
 }
+
+#resend {
+    visibility: hidden;
+}
